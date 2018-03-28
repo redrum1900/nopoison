@@ -96,12 +96,18 @@ var Main = (function (_super) {
     };
     Main.prototype.runGame = function () {
         return __awaiter(this, void 0, void 0, function () {
+            var result;
             return __generator(this, function (_a) {
                 switch (_a.label) {
                     case 0: return [4 /*yield*/, this.loadResource()];
                     case 1:
                         _a.sent();
                         this.createGameScene();
+                        return [4 /*yield*/, RES.getResAsync("stage_json")];
+                    case 2:
+                        result = _a.sent();
+                        gameData.stages = result;
+                        debugger;
                         return [2 /*return*/];
                 }
             });
@@ -142,16 +148,6 @@ var Main = (function (_super) {
         this.addChild(container);
         SceneController.instance.setStage(container);
         SceneController.initGame();
-    };
-    /**
-     * 根据name关键字创建一个Bitmap对象。name属性请参考resources/resource.json配置文件的内容。
-     * Create a Bitmap object according to name keyword.As for the property of name please refer to the configuration file of resources/resource.json.
-     */
-    Main.prototype.createBitmapByName = function (name) {
-        var result = new egret.Bitmap();
-        var texture = RES.getRes(name);
-        result.texture = texture;
-        return result;
     };
     /**
      * 描述文件加载成功，开始播放动画

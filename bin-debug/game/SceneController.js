@@ -36,6 +36,10 @@ var SceneController = (function () {
         // //加入开始场景
         stage.addChild(this.instance.startScene);
     };
+    SceneController.startGame = function () {
+        var stage = this.instance._stage;
+        stage.removeChild(this.instance.startScene);
+    };
     return SceneController;
 }());
 __reflect(SceneController.prototype, "SceneController");

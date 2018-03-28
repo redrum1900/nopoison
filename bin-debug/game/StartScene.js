@@ -16,6 +16,7 @@ var StartScene = (function (_super) {
         return _this;
     }
     StartScene.prototype.initView = function () {
+        StartScene.startScene = new StartScene();
         var sky = GameUtil.createBitmapByName("bg_jpg");
         this.addChild(sky);
         var stageW = this.stage.stageWidth;
@@ -49,16 +50,17 @@ var StartScene = (function (_super) {
         colorLabel.x = 172;
         colorLabel.y = 80;
         this.addChild(colorLabel);
-        var textfield = new egret.TextField();
-        this.addChild(textfield);
-        textfield.alpha = 0;
-        textfield.width = stageW - 172;
-        textfield.textAlign = egret.HorizontalAlign.CENTER;
-        textfield.size = 24;
-        textfield.textColor = 0xffffff;
-        textfield.x = 172;
-        textfield.y = 135;
-        this.textfield = textfield;
+        var button = new eui.Button();
+        button.label = "Click!";
+        button.horizontalCenter = 0;
+        button.verticalCenter = 0;
+        button.x = 200;
+        button.y = 200;
+        button.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onButtonClick, this);
+        this.addChild(button);
+    };
+    StartScene.prototype.onButtonClick = function (e) {
+        SceneController.startGame();
     };
     return StartScene;
 }(egret.DisplayObjectContainer));

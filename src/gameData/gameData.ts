@@ -1,0 +1,3 @@
+class gameData{
+    static stages;
+}

@@ -38,4 +38,9 @@ class SceneController {
 		// //加入开始场景
 		stage.addChild( this.instance.startScene );
 	}
+
+	static startGame(){
+		let stage:egret.DisplayObjectContainer = this.instance._stage;
+		stage.removeChild(this.instance.startScene)
+	}
 }

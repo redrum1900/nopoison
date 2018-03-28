@@ -6,13 +6,19 @@ class StartScene extends egret.DisplayObjectContainer{
 	}
 	private textfield: egret.TextField;
 
+     static startScene:StartScene;
+
 	private initView(){
+        StartScene.startScene = new StartScene();
+
 		let sky = GameUtil.createBitmapByName("bg_jpg");
         this.addChild(sky);
+        
         let stageW = this.stage.stageWidth;
         let stageH = this.stage.stageHeight;
         sky.width = stageW;
         sky.height = stageH;
+      
 
         let topMask = new egret.Shape();
         topMask.graphics.beginFill(0x000000, 0.5);
@@ -46,15 +52,18 @@ class StartScene extends egret.DisplayObjectContainer{
         colorLabel.y = 80;
         this.addChild(colorLabel);
 
-        let textfield = new egret.TextField();
-        this.addChild(textfield);
-        textfield.alpha = 0;
-        textfield.width = stageW - 172;
-        textfield.textAlign = egret.HorizontalAlign.CENTER;
-        textfield.size = 24;
-        textfield.textColor = 0xffffff;
-        textfield.x = 172;
-        textfield.y = 135;
-        this.textfield = textfield;
+        let button = new eui.Button();
+        button.label = "Click!";
+        button.horizontalCenter = 0;
+        button.verticalCenter = 0;
+        button.x = 200;
+        button.y = 200;
+        button.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onButtonClick, this);
+        this.addChild(button);
+       
 	}
+
+    private onButtonClick(e: egret.TouchEvent){
+        SceneController.startGame();
+    }
 }
