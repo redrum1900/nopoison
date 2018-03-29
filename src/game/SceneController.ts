@@ -2,10 +2,11 @@ class SceneController {
     private _stage:egret.DisplayObjectContainer;
 
     private startScene:StartScene;
+	private gameScene:GameScene;
 
     public constructor() {
 		this.startScene = new StartScene();
-		// this.gameScene = new GameScene();
+		this.gameScene = new GameScene();
 		// this.overScene = new OverScene();
 	}
 	static sceneController:SceneController;
@@ -13,7 +14,6 @@ class SceneController {
     static get instance(){
         if(!this.sceneController){
             this.sceneController = new SceneController();
-
         }
         return this.sceneController;
     }
@@ -27,10 +27,10 @@ class SceneController {
 	 */
 	static initGame(){
 		let stage:egret.DisplayObjectContainer = this.instance._stage;
-		// if( this.instance.gameScene.parent){
-		// 	stage.removeChild( this.instance.gameScene );
-		// 	this.instance.gameScene = new GameScene();
-		// }
+		if( this.instance.gameScene.parent){
+			stage.removeChild( this.instance.gameScene );
+			this.instance.gameScene = new GameScene();
+		}
 		// if( this.instance.overScene.parent){
 		// 	stage.removeChild(this.instance.overScene);
 		// 	this.instance.overScene = new OverScene();
@@ -42,5 +42,6 @@ class SceneController {
 	static startGame(){
 		let stage:egret.DisplayObjectContainer = this.instance._stage;
 		stage.removeChild(this.instance.startScene)
+		stage.addChild(this.instance.gameScene)
 	}
 }

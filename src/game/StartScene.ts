@@ -6,7 +6,7 @@ class StartScene extends egret.DisplayObjectContainer{
 	}
 	private textfield: egret.TextField;
 
-     static startScene:StartScene;
+    static startScene:StartScene;
 
 	private initView(){
         StartScene.startScene = new StartScene();

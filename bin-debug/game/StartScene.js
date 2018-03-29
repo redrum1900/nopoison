@@ -61,7 +61,6 @@ var StartScene = (function (_super) {
         this.addChild(button);
     };
     StartScene.prototype.onButtonClick = function (e) {
-        debugger;
         SceneController.startGame();
     };
     return StartScene;

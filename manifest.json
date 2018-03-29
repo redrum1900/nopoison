@@ -9,12 +9,17 @@
 		"libs/modules/promise/promise.js"
 	],
 	"game": [
-		"bin-debug/LoadingUI.js",
-		"bin-debug/Main.js",
-		"bin-debug/Platform.js",
+		"bin-debug/baseObject/GameSceneObject.js",
+		"bin-debug/baseObject/RoleObject.js",
 		"bin-debug/common/GameUtil.js",
+		"bin-debug/baseObject/CardObject.js",
+		"bin-debug/LoadingUI.js",
+		"bin-debug/Platform.js",
+		"bin-debug/Main.js",
+		"bin-debug/game/GameScene.js",
 		"bin-debug/game/SceneController.js",
 		"bin-debug/game/StartScene.js",
-		"bin-debug/gameData/gameData.js"
+		"bin-debug/gameData/gameData.js",
+		"bin-debug/gameObject/PlayerObject.js"
 	]
 }

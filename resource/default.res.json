@@ -1,7 +1,7 @@
 {
 	"groups": [
 		{
-			"keys": "bg_jpg,egret_icon_png,description_json,bg2_jpg,egret_icon2_png,description2_json,stages_json",
+			"keys": "bg_jpg,egret_icon_png,description_json,bg2_jpg,egret_icon2_png,description2_json,stages_json,pause2_png",
 			"name": "preload"
 		}
 	],
@@ -45,6 +45,16 @@
 			"name": "stages_json",
 			"type": "json",
 			"url": "config/stages.json"
+		},
+		{
+			"url": "assets/pause.png",
+			"type": "image",
+			"name": "pause_png"
+		},
+		{
+			"name": "pause2_png",
+			"type": "image",
+			"url": "assets/pause.png"
 		}
 	]
 }

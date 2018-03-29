@@ -4,7 +4,7 @@ var __reflect = (this && this.__reflect) || function (p, c, t) {
 var SceneController = (function () {
     function SceneController() {
         this.startScene = new StartScene();
-        // this.gameScene = new GameScene();
+        this.gameScene = new GameScene();
         // this.overScene = new OverScene();
     }
     Object.defineProperty(SceneController, "instance", {
@@ -25,10 +25,10 @@ var SceneController = (function () {
      */
     SceneController.initGame = function () {
         var stage = this.instance._stage;
-        // if( this.instance.gameScene.parent){
-        // 	stage.removeChild( this.instance.gameScene );
-        // 	this.instance.gameScene = new GameScene();
-        // }
+        if (this.instance.gameScene.parent) {
+            stage.removeChild(this.instance.gameScene);
+            this.instance.gameScene = new GameScene();
+        }
         // if( this.instance.overScene.parent){
         // 	stage.removeChild(this.instance.overScene);
         // 	this.instance.overScene = new OverScene();
@@ -39,6 +39,7 @@ var SceneController = (function () {
     SceneController.startGame = function () {
         var stage = this.instance._stage;
         stage.removeChild(this.instance.startScene);
+        stage.addChild(this.instance.gameScene);
     };
     return SceneController;
 }());
