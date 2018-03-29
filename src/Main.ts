@@ -68,7 +68,6 @@ class Main extends egret.DisplayObjectContainer {
 
         const result = await RES.getResAsync("stage_json")
         gameData.stages = result;
-        debugger
         // this.startAnimation(result);
         // await platform.login();
         // const userInfo = await platform.getUserInfo();

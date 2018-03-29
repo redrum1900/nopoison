@@ -18,11 +18,13 @@ var StartScene = (function (_super) {
     StartScene.prototype.initView = function () {
         StartScene.startScene = new StartScene();
         var sky = GameUtil.createBitmapByName("bg_jpg");
-        this.addChild(sky);
         var stageW = this.stage.stageWidth;
         var stageH = this.stage.stageHeight;
         sky.width = stageW;
         sky.height = stageH;
+        sky.touchEnabled = true;
+        sky.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onButtonClick, this);
+        this.addChild(sky);
         var topMask = new egret.Shape();
         topMask.graphics.beginFill(0x000000, 0.5);
         topMask.graphics.drawRect(0, 0, stageW, 172);
@@ -56,10 +58,10 @@ var StartScene = (function (_super) {
         button.verticalCenter = 0;
         button.x = 200;
         button.y = 200;
-        button.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onButtonClick, this);
         this.addChild(button);
     };
     StartScene.prototype.onButtonClick = function (e) {
+        debugger;
         SceneController.startGame();
     };
     return StartScene;

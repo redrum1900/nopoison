@@ -107,7 +107,6 @@ var Main = (function (_super) {
                     case 2:
                         result = _a.sent();
                         gameData.stages = result;
-                        debugger;
                         return [2 /*return*/];
                 }
             });

@@ -12,12 +12,15 @@ class StartScene extends egret.DisplayObjectContainer{
         StartScene.startScene = new StartScene();
 
 		let sky = GameUtil.createBitmapByName("bg_jpg");
-        this.addChild(sky);
+        
         
         let stageW = this.stage.stageWidth;
         let stageH = this.stage.stageHeight;
         sky.width = stageW;
         sky.height = stageH;
+        sky.touchEnabled = true;
+        sky.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onButtonClick, this);
+        this.addChild(sky);
       
 
         let topMask = new egret.Shape();
@@ -58,7 +61,6 @@ class StartScene extends egret.DisplayObjectContainer{
         button.verticalCenter = 0;
         button.x = 200;
         button.y = 200;
-        button.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onButtonClick, this);
         this.addChild(button);
        
 	}

@@ -1,7 +1,7 @@
 {
 	"groups": [
 		{
-			"keys": "bg_jpg,egret_icon_png,description_json,bg2_jpg,egret_icon2_png,description2_json",
+			"keys": "bg_jpg,egret_icon_png,description_json,bg2_jpg,egret_icon2_png,description2_json,stages_json",
 			"name": "preload"
 		}
 	],
@@ -35,8 +35,14 @@
 			"name": "description2_json",
 			"type": "json",
 			"url": "config/description.json"
-		},{
-			"name":"stage_json",
+		},
+		{
+			"name": "stage_json",
+			"type": "json",
+			"url": "config/stages.json"
+		},
+		{
+			"name": "stages_json",
 			"type": "json",
 			"url": "config/stages.json"
 		}
