@@ -12,7 +12,7 @@ var GameSceneObject = (function (_super) {
     __extends(GameSceneObject, _super);
     function GameSceneObject() {
         var _this = _super.call(this) || this;
-        _this.init();
+        _this.addEventListener(egret.Event.ADDED_TO_STAGE, _this.init, _this);
         return _this;
     }
     GameSceneObject.prototype.init = function () {
@@ -25,7 +25,7 @@ var GameSceneObject = (function (_super) {
         //暂停按钮
         var pauseBtn = GameUtil.createBitmapByName("pause_png");
         pauseBtn.touchEnabled = true;
-        pauseBtn.x = 20;
+        pauseBtn.x = this.stage.stageWidth - pauseBtn.width - 20;
         pauseBtn.y = 20;
         pauseBtn.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onPause, this);
         this.UIContainer.addChild(pauseBtn);

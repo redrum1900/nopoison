@@ -1,7 +1,7 @@
 class GameSceneObject extends egret.DisplayObjectContainer{
     public constructor(){
 		super();
-        this.init();
+		this.addEventListener(egret.Event.ADDED_TO_STAGE,this.init,this);
 	}
 
     private UIContainer:egret.DisplayObjectContainer;//UI层
@@ -19,7 +19,7 @@ class GameSceneObject extends egret.DisplayObjectContainer{
          //暂停按钮
 		let pauseBtn:egret.Bitmap = GameUtil.createBitmapByName("pause_png");
 		pauseBtn.touchEnabled = true;
-		pauseBtn.x = 20;
+		pauseBtn.x = this.stage.stageWidth - pauseBtn.width - 20;
 		pauseBtn.y = 20;
 		pauseBtn.addEventListener( egret.TouchEvent.TOUCH_TAP,this.onPause,this);
 		this.UIContainer.addChild(pauseBtn);
