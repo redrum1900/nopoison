@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="BeginSceneSkin" width="1920" height="1080" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" >
+	<w:Config id="1628a373c6d" ></w:Config>
+	<e:Image x="0" y="0" width="1920" height="1080" source="bg_jpg" fillMode="clip" locked="true"/>
+	<e:Button id="btn_story" label="故事模式" x="802.67" y="680" anchorOffsetX="0" width="314.67" anchorOffsetY="0" height="90.67">
+		<e:skinName>
+			<e:Skin states="up,down,disabled">
+			<e:Image width="100%" height="100%" source="StartBtn_png" source.down="StartBtn1_png"/>
+			<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+			</e:Skin>
+		</e:skinName>
+	</e:Button>
+	<e:Button id="btn_rush" label="无线模式" x="802.67" y="810.34" anchorOffsetX="0" width="314.67" anchorOffsetY="0" height="90.67">
+		<e:skinName>
+		<e:Skin states="up,down,disabled">
+			<e:Image width="100%" height="100%" source="StartBtn_png" source.down="StartBtn1_png" x="145.33" y="50"/>
+			<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+		</e:Skin>
+		</e:skinName>
+	</e:Button>
+	<e:Image source="bg_jpg" x="156.33" y="40.5" width="999" height="999" visible="false"/>
+</e:Skin>

@@ -1,0 +1,14 @@
+{
+	"skins": {
+		"BeginScene": "resource/eui_skins/BeginScene.exml",
+		"LevelScene": "resource/eui_skins/LevelScene.exml",
+		"LevelIcon": "resource/eui_skins/LevelIcon.exml"
+	},
+	"autoGenerateExmlsList": true,
+	"exmls": [
+		"resource/eui_skins/BeginScene.exml",
+		"resource/eui_skins/LevelIcon.exml",
+		"resource/eui_skins/LevelScene.exml"
+	],
+	"path": "resource/default.thm.json"
+}

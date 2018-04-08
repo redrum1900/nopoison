@@ -1,0 +1,17 @@
+{
+    "1628a373c6d": {
+        "path": "game/BeginScene.ts",
+        "class": "BeginScene",
+        "parentPath": ""
+    },
+    "1628afbebca": {
+        "path": "game/LevelScene.ts",
+        "class": "LevelScene",
+        "parentPath": ""
+    },
+    "1628b0b1f80": {
+        "path": "game/LevelIcon.ts",
+        "class": "LevelIcon",
+        "parentPath": ""
+    }
+}

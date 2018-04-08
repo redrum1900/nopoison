@@ -3,10 +3,14 @@ class SceneController {
 
     private startScene:StartScene;
 	private gameScene:GameScene;
+	private beginScene:BeginScene;
+	private levelScene:LevelScene;
 
     public constructor() {
 		this.startScene = new StartScene();
 		this.gameScene = new GameScene();
+		this.beginScene = new BeginScene();
+		this.levelScene = new LevelScene();
 		// this.overScene = new OverScene();
 	}
 	static sceneController:SceneController;
@@ -36,12 +40,13 @@ class SceneController {
 		// 	this.instance.overScene = new OverScene();
 		// }
 		// //加入开始场景
-		stage.addChild( this.instance.startScene );
+		stage.addChild( this.instance.beginScene );
 	}
 
 	static startGame(){
 		let stage:egret.DisplayObjectContainer = this.instance._stage;
-		stage.removeChild(this.instance.startScene)
-		stage.addChild(this.instance.gameScene)
+		stage.removeChild(this.instance.beginScene)
+		stage.addChild(this.instance.levelScene);
+		// stage.addChild(this.instance.gameScene)
 	}
 }

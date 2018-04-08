@@ -5,6 +5,8 @@ var SceneController = (function () {
     function SceneController() {
         this.startScene = new StartScene();
         this.gameScene = new GameScene();
+        this.beginScene = new BeginScene();
+        this.levelScene = new LevelScene();
         // this.overScene = new OverScene();
     }
     Object.defineProperty(SceneController, "instance", {
@@ -34,12 +36,13 @@ var SceneController = (function () {
         // 	this.instance.overScene = new OverScene();
         // }
         // //加入开始场景
-        stage.addChild(this.instance.startScene);
+        stage.addChild(this.instance.beginScene);
     };
     SceneController.startGame = function () {
         var stage = this.instance._stage;
-        stage.removeChild(this.instance.startScene);
-        stage.addChild(this.instance.gameScene);
+        stage.removeChild(this.instance.beginScene);
+        stage.addChild(this.instance.levelScene);
+        // stage.addChild(this.instance.gameScene)
     };
     return SceneController;
 }());

@@ -11,15 +11,22 @@
 	"game": [
 		"bin-debug/baseObject/GameSceneObject.js",
 		"bin-debug/baseObject/RoleObject.js",
-		"bin-debug/common/GameUtil.js",
-		"bin-debug/baseObject/CardObject.js",
-		"bin-debug/LoadingUI.js",
+		"bin-debug/game/BeginScene.js",
 		"bin-debug/Platform.js",
+		"bin-debug/ThemeAdapter.js",
+		"bin-debug/baseObject/CardObject.js",
+		"bin-debug/AssetAdapter.js",
 		"bin-debug/Main.js",
+		"bin-debug/common/GameUtil.js",
+		"bin-debug/LoadingUI.js",
 		"bin-debug/game/GameScene.js",
+		"bin-debug/game/LevelIcon.js",
+		"bin-debug/game/LevelScene.js",
 		"bin-debug/game/SceneController.js",
+		"bin-debug/game/SoundManager.js",
 		"bin-debug/game/StartScene.js",
 		"bin-debug/gameData/gameData.js",
+		"bin-debug/gameData/levelData.js",
 		"bin-debug/gameObject/PlayerObject.js"
 	]
 }
